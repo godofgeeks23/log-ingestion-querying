@@ -62,6 +62,26 @@ app.post('/ingest_bulk', async (req, res) => {
     }
 });
 
+app.post('/search', async (req, res) => {
+    try {
+        const { index, query, size } = req.body;
+        const response = await esClient.search({ index, body: { query }, size: size });
+        res.json(response.body.hits.hits);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// api to get results of sql query
+app.post('/search_sql', async (req, res) => {
+    try {
+        const { query, size } = req.body;
+        const response = await esClient.sql.query({ body: { query }, size: size });
+        res.json(response.body.hits.hits);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 
 // Start the server
