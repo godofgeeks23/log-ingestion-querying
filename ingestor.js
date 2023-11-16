@@ -72,17 +72,33 @@ app.post('/search', async (req, res) => {
     }
 });
 
+// function to translate sql query to elasticsearch query
+function translateSqlToEsQuery(sqlQuery) {
+    const esquery = esClient.sql.translate({ body: { query: sqlQuery } });
+    return esquery.body.query;
+}
+
 // api to get results of sql query
 app.post('/search_sql', async (req, res) => {
     try {
         const { query, size } = req.body;
-        const response = await esClient.sql.query({ body: { query }, size: size });
-        res.json(response.body.hits.hits);
+        const response = await esClient.sql.query({ body: { query } });
+        res.json(response.body.rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
+// api to get results of sql query
+app.post('/search_sql_translate', async (req, res) => {
+    try {
+        const { index, query, size } = req.body;
+        const response = await esClient.search({ index, body: esClient.sql.translate({ body: { query: query } }) , size: size });
+        res.json(response.body.hits.hits);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 // Start the server
 app.listen(port, () => {
