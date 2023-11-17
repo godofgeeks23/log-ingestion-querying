@@ -81,9 +81,10 @@ function translateSqlToEsQuery(sqlQuery) {
 // api to get results of sql query
 app.post('/search_sql', async (req, res) => {
     try {
-        const { query, size } = req.body;
-        const response = await esClient.sql.query({ body: { query } });
-        res.json(response.body.rows);
+        const { query } = req.body;
+        // const response = await esClient.sql.query({ body: { query } });
+        const esq = translateSqlToEsQuery(query);
+        res.json(esq);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
