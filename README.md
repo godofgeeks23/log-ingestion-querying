@@ -116,10 +116,10 @@ Docker (version used 24.0.7)
    docker compose up
    ```
 
-NOTE - The docker compose may exit after a few seconds. This issue is known and can be fixed by running the following command on the host machine:
-```
-sudo sysctl -w vm.max_map_count=262144
-```
+    NOTE - The docker compose may exit after a few seconds. This issue is known and can be fixed by running the following command on the host machine:
+    ```
+    sudo sysctl -w vm.max_map_count=262144
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
