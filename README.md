@@ -97,8 +97,9 @@
 
 ### Built With
 
-* [![Node][Node.js]][Node.js-url]
-* [![Elasticsearch][Elasticsearch.com]][Elasticsearch-url]
+* Node
+* Elasticsearch
+* Docker
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
