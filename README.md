@@ -20,7 +20,9 @@
 -->
 
 [![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aviralsrivastav23/]
+
 [![Twitter][twitter-shield]][https://twitter.com/godofgeeks_]
+
 [![GitHub][github-shield]][https://github.com/godofgeeks23]
 
 
@@ -273,6 +275,10 @@ LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
+[twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
+[twitter-url]: https://twitter.com/twitter_username
+[github-shield]: https://img.shields.io/badge/-Github-black.svg?style=for-the-badge&logo=github&colorB=555
+[github-url]: https://github.com/godofgeeks23
 [product-screenshot]: images/screenshot.png
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
