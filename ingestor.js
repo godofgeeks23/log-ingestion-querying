@@ -1,6 +1,5 @@
 const { Client } = require('@elastic/elasticsearch');
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
@@ -8,8 +7,6 @@ const port = 3000;
 // Elasticsearch client
 const esClient = new Client({ node: 'http://localhost:9200' }); // Update with your Elasticsearch server URL
 
-// Middleware for parsing JSON in the request body
-// app.use(bodyParser.json());
 // set limit of request body size
 app.use(express.json({ limit: '50mb' }));
 
@@ -61,45 +58,6 @@ app.post('/ingest_bulk', async (req, res) => {
         res.status(500).json({ status: 'error', message: 'Error ingesting logs' });
     }
 });
-
-app.post('/search', async (req, res) => {
-    try {
-        const { index, query, size } = req.body;
-        const response = await esClient.search({ index, body: { query }, size: size });
-        res.json(response.body.hits.hits);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// // function to translate sql query to elasticsearch query
-// function translateSqlToEsQuery(sqlQuery) {
-//     const esquery = esClient.sql.translate({ body: { query: sqlQuery } });
-//     return esquery.body.query;
-// }
-
-// // api to get results of sql query
-// app.post('/search_sql', async (req, res) => {
-//     try {
-//         const { query } = req.body;
-//         // const response = await esClient.sql.query({ body: { query } });
-//         const esq = translateSqlToEsQuery(query);
-//         res.json(esq);
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// });
-
-// // api to get results of sql query
-// app.post('/search_sql_translate', async (req, res) => {
-//     try {
-//         const { index, query, size } = req.body;
-//         const response = await esClient.search({ index, body: esClient.sql.translate({ body: { query: query } }) , size: size });
-//         res.json(response.body.hits.hits);
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// });
 
 // Start the server
 app.listen(port, () => {
