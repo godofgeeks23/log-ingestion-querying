@@ -10,26 +10,10 @@
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
 [![LinkedIn][linkedin-shield]][LinkedIn-url]
 [![Twitter][twitter-shield]][twitter-url]
 [![GitHub][github-shield]][github-url]
-<!-- [![JQuery][JQuery.com]][JQuery-url]
-
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aviralsrivastav23/
-
-[![Twitter][twitter-shield]][https://twitter.com/godofgeeks_]
-
-[![GitHub][github-shield]][https://github.com/godofgeeks23] -->
-
 
 
 <!-- PROJECT LOGO -->
@@ -54,7 +38,6 @@
     <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -84,15 +67,12 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -102,7 +82,6 @@
 * Docker
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -157,7 +136,6 @@ Docker (version used 24.0.7)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
@@ -240,19 +218,14 @@ Usage:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Design -->
+## Design
 
-<!-- ROADMAP -->
-## Roadmap
+### Why Elasticsearch?
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+### Why NodeJS?
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+### Why Docker?
 
 
 <!-- CONTACT -->
@@ -263,8 +236,6 @@ Aviral Srivastava - [@godofgeeks_](https://twitter.com/godofgeeks_) - aviralji4@
 LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.com/in/aviralsrivastav23/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
