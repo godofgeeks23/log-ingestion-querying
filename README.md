@@ -107,6 +107,7 @@ To get a local copy up and running follow these simple example steps.
 This project requires the following software to be installed on your system:
 
 NodeJS (version used - v20.2.0)
+
 Docker (version used 24.0.7)
 
 ### Installation
@@ -145,7 +146,6 @@ Docker (version used 24.0.7)
 
     This will start the ingestor in cluster mode, utilizing all the cores of the system.
 
-4.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,9 +154,43 @@ Docker (version used 24.0.7)
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Using the ingestor
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+After the ingestor server is up and running, we can start sending logs to it over HTTP at port 3000.
+
+Mainly 2 routes are exposed by the ingestor:
+
+1. /ingest_single - To send a single log to the ingestor
+
+2. /ingest_bulk - To send multiple logs to the ingestor at once
+
+A sample cURL request to /ingest_bulk is as follows:
+```
+curl --location 'http://localhost:3000/ingest_bulk' \
+--header 'Content-Type: application/json' \
+--data '[
+  {
+    "level": "info",
+    "message": "Timeout error",
+    "resourceId": "server-1093",
+    "timestamp": "2023-10-26T17:15:07.408828Z",
+    "traceId": "c3-z1-123",
+    "spanId": "span-847",
+    "commit": "8e768407",
+    "metadata": { "parentResourceId": "server-9991" }
+  },
+  {
+    "level": "warning",
+    "message": "Timeout error",
+    "resourceId": "server-8919",
+    "timestamp": "2023-11-01T17:15:07.408868Z",
+    "traceId": "a3-x2-789",
+    "spanId": "span-320",
+    "commit": "7e236379",
+    "metadata": { "parentResourceId": "server-6718" }
+  }
+]'
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
