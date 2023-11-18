@@ -108,7 +108,7 @@ function displayHelp() {
         node cli.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>
     Available Filters and Options:
         --help                    Display this help message
-        --limit                    Number of results to return (default: 10)
+        --limit                   Number of results to return (default: 10)
         --level                   Log level (e.g., error, warning, info)
         --message                 Log message
         --resourceId              Resource ID
