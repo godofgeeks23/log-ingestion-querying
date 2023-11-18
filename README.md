@@ -18,9 +18,10 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aviralsrivastav23/]
+[![Twitter][twitter-shield]][https://twitter.com/godofgeeks_]
+[![GitHub][github-shield]][https://github.com/godofgeeks23]
 
 
 
@@ -241,18 +242,6 @@ Usage:
     - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
