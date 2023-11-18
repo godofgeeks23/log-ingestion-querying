@@ -116,10 +116,36 @@ Docker (version used 24.0.7)
    docker compose up
    ```
 
-    NOTE - The docker compose may exit after a few seconds. This issue is known and can be fixed by running the following command on the host machine:
+    NOTE - The docker compose may exit after a few seconds. Due to a error as -
+    ```
+    elasticsearch_1  | max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+    ```
+    
+    This issue is known and can be fixed by running the following command on the host machine:
+    
     ```
     sudo sysctl -w vm.max_map_count=262144
     ```
+
+2. Install node packages
+   ```sh
+   npm i
+   ```
+
+3. Start the ingestor (single instance mode)
+   ```sh
+   node ingestor.js
+   ```
+
+   NOTE: For better performance, use the following command to start the ingestor:
+   ```
+   npm i -g pm2
+   pm2 start ingestor.js -i max
+    ```
+
+    This will start the ingestor in cluster mode, utilizing all the cores of the system.
+
+4.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
