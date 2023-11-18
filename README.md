@@ -19,11 +19,16 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aviralsrivastav23/]
+[![LinkedIn][linkedin-shield]][LinkedIn-url]
+[![Twitter][twitter-shield]][twitter-url]
+[![GitHub][github-shield]][github-url]
+<!-- [![JQuery][JQuery.com]][JQuery-url]
+
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aviralsrivastav23/
 
 [![Twitter][twitter-shield]][https://twitter.com/godofgeeks_]
 
-[![GitHub][github-shield]][https://github.com/godofgeeks23]
+[![GitHub][github-shield]][https://github.com/godofgeeks23] -->
 
 
 
