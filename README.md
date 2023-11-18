@@ -192,6 +192,42 @@ curl --location 'http://localhost:3000/ingest_bulk' \
 ]'
 ```
 
+### Using the querying CLI
+
+The querying CLI can be used to query the logs stored in the elasticsearch cluster.
+
+The CLI can be started using the following command:
+```
+node searcher.js
+```
+
+The CLI displays the help information about its commands and usage. These are also given as follows - 
+
+```
+Usage:
+        node searcher.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>
+
+    Available Filters and Options:
+        --help                    Display this help message
+        --limit                   Number of results to return (default: 10)
+        --level                   Log level (e.g., error, warning, info)
+        --message                 Log message
+        --resourceId              Resource ID
+        --traceId                 Trace ID
+        --spanId                  Span ID
+        --commit                  Commit ID
+        --metadata.parentResourceId  Parent Resource ID
+        --startDate               Start date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
+        --endDate                 End date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
+
+    Example:
+        node searcher.js --level error
+        node searcher.js --level error --message "Failed to connect" --limit 3
+        node searcher.js --resourceId "server-8211"
+        node searcher.js --startDate 2023-11-01T17:11:55.982264Z --endDate 2023-11-03T17:12:02.364139Z
+        node searcher.js --startDate 2023-11-01T17:11:55.982264Z
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -225,20 +261,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Aviral Srivastava - [@godofgeeks_](https://twitter.com/godofgeeks_) - aviralji4@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.com/in/aviralsrivastav23/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -259,19 +289,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
