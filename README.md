@@ -227,6 +227,23 @@ Usage:
 
 ### Why Docker?
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Features -->
+## Features
+
+### Ingestor
+
+- [x] Can ingest large amount of logs
+- [x] Scalability - as elasticsearch cluster is horizontally scalable, and also the ingestor can be run in cluster mode for multi core systems
+
+
+### Querying CLI
+
+- [x] Filter based search support
+- [x] Date range based search support
+- [x] Multiple filters can be combined to form complex queries
 
 <!-- CONTACT -->
 ## Contact
@@ -247,5 +264,3 @@ LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.
 [github-shield]: https://img.shields.io/badge/-Github-black.svg?style=for-the-badge&logo=github&colorB=555
 [github-url]: https://github.com/godofgeeks23
 [product-screenshot]: images/screenshot.png
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
