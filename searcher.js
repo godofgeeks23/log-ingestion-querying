@@ -103,20 +103,24 @@ function parseCommandLineArgs(args) {
 }
 
 function displayHelp() {
-    console.log('Usage:');
-    console.log('  node cli.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>');
-    console.log('\nAvailable Filters and Options:');
-    console.log('  --help                    Display this help message');
-    console.log('  --limit                    Number of results to return (default: 10)')
-    console.log('  --level                   Log level (e.g., error, warning, info)');
-    console.log('  --message                 Log message');
-    console.log('  --resourceId              Resource ID');
-    console.log('  --traceId                 Trace ID');
-    console.log('  --spanId                  Span ID');
-    console.log('  --commit                  Commit ID');
-    console.log('  --metadata.parentResourceId  Parent Resource ID');
-    console.log('  --startDate               Start date for log search (format: YYYY-MM-DDTHH:mm:ssZ)');
-    console.log('  --endDate                 End date for log search (format: YYYY-MM-DDTHH:mm:ssZ)');
-    console.log('\nExample:');
-    console.log('  node cli.js --level error --message "Failed to connect" --resourceId server-1234');
+    const help_text = `
+    Usage:
+        node cli.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>
+    Available Filters and Options:
+        --help                    Display this help message
+        --limit                    Number of results to return (default: 10)
+        --level                   Log level (e.g., error, warning, info)
+        --message                 Log message
+        --resourceId              Resource ID
+        --traceId                 Trace ID
+        --spanId                  Span ID
+        --commit                  Commit ID
+        --metadata.parentResourceId  Parent Resource ID
+        --startDate               Start date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
+        --endDate                 End date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
+    Example:
+        node cli.js --level error --message "Failed to connect" --resourceId server-1234
+    `;
+
+    console.log(help_text);
 }
