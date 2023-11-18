@@ -33,9 +33,9 @@ function buildFilters(query) {
     // Add filters based on command-line parameters
     if (query.level) filters.push({ term: { level: query.level } });
     if (query.message) filters.push({ match: { message: query.message } });
-    if (query.resourceId) filters.push({ term: { resourceId: query.resourceId } });
-    if (query.traceId) filters.push({ term: { traceId: query.traceId } });
-    if (query.spanId) filters.push({ term: { spanId: query.spanId } });
+    if (query.resourceId) filters.push({ match: { resourceId: query.resourceId } });
+    if (query.traceId) filters.push({ match: { traceId: query.traceId } });
+    if (query.spanId) filters.push({ match: { spanId: query.spanId } });
     if (query.commit) filters.push({ term: { commit: query.commit } });
     if (query['metadata.parentResourceId']) {
         filters.push({ term: { 'metadata.parentResourceId': query['metadata.parentResourceId'] } });
@@ -49,7 +49,6 @@ function buildFilters(query) {
                 timestamp: {},
             },
         };
-
         if (query.startDate) rangeFilter.range.timestamp.gte = query.startDate;
         if (query.endDate) rangeFilter.range.timestamp.lte = query.endDate;
 
@@ -105,7 +104,8 @@ function parseCommandLineArgs(args) {
 function displayHelp() {
     const help_text = `
     Usage:
-        node cli.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>
+        node searcher.js --level <level> --message <message> --resourceId <resourceId> --traceId <traceId> --spanId <spanId> --commit <commit> --metadata.parentResourceId <parentResourceId> --startDate <startDate> --endDate <endDate>
+
     Available Filters and Options:
         --help                    Display this help message
         --limit                   Number of results to return (default: 10)
@@ -118,8 +118,14 @@ function displayHelp() {
         --metadata.parentResourceId  Parent Resource ID
         --startDate               Start date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
         --endDate                 End date for log search (format: YYYY-MM-DDTHH:mm:ssZ)
+
     Example:
-        node cli.js --level error --message "Failed to connect" --resourceId server-1234
+        node searcher.js --level error
+        node searcher.js --level error --message "Failed to connect" --limit 3
+        node searcher.js --resourceId "server-8211"
+        node searcher.js --startDate 2023-11-01T17:11:55.982264Z --endDate 2023-11-03T17:12:02.364139Z
+        node searcher.js --startDate 2023-11-01T17:11:55.982264Z
+        
     `;
 
     console.log(help_text);
