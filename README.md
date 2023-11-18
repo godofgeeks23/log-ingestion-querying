@@ -245,6 +245,13 @@ Usage:
 - [x] Date range based search support
 - [x] Multiple filters can be combined to form complex queries
 
+## Further Improvements
+
+- [ ] Make CLI more robust using Node CLI libraries like commander.js
+- [ ] Validation of CLI arguments
+- [ ] Regex based search support
+- [ ] Support for more filters
+
 <!-- CONTACT -->
 ## Contact
 
