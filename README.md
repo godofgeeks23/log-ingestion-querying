@@ -8,9 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dyte-submissions/november-2023-hiring-godofgeeks23">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+
 
 <h3 align="center">Logs Ingestor and Query system</h3>
 
@@ -27,7 +25,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/dyte-submissions/november-2023-hiring-godofgeeks23)
 
 
 
@@ -43,7 +41,6 @@
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -219,6 +216,8 @@ Usage:
 
 ## Design
 
+[![System Design][system-design]]
+
 ### Why Elasticsearch?
 
 For efficient full-text search, Elasticsearch is a powerful choice. It provides scalability and speed for searching through large volumes of logs.
@@ -316,3 +315,4 @@ LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.
 [github-shield]: https://img.shields.io/badge/-Github-black.svg?style=for-the-badge&logo=github&colorB=555
 [github-url]: https://github.com/godofgeeks23
 [product-screenshot]: images/productname.png
+[system-design]: images/systemdesign.png
