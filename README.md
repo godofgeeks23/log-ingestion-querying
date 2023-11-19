@@ -1,14 +1,5 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 [![LinkedIn][linkedin-shield]][LinkedIn-url]
 [![Twitter][twitter-shield]][twitter-url]
@@ -17,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/dyte-submissions/november-2023-hiring-godofgeeks23">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,7 +17,7 @@
   <p align="center">
     A system aimed at ingesting large amount of logs and querying them efficiently. Built using Node and Elasticsearch. 
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dyte-submissions/november-2023-hiring-godofgeeks23"><strong>Explore the docs »</strong></a>
     <br />
     <br />
   </p>
@@ -38,7 +29,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Built With
 
@@ -46,22 +37,22 @@
 - Elasticsearch
 - Docker
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
 This project requires the following software to be installed on your system:
 
-NodeJS (version used - v20.2.0)
+* NodeJS (version used - v20.2.0)
 
-Docker (version used 24.0.7)
+* Docker (version used 24.0.7)
 
 ### Installation
 
@@ -78,6 +69,8 @@ Docker (version used 24.0.7)
    ```
    docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.5.2
    ```
+
+   OR
 
    1.2 Start the elasticsearch cluster using docker-compose
 
@@ -121,7 +114,7 @@ Docker (version used 24.0.7)
 
    This will start the ingestor in cluster mode, utilizing all the cores of the system.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- USAGE EXAMPLES -->
 
@@ -133,11 +126,11 @@ After the ingestor server is up and running, we can start sending logs to it ove
 
 Mainly 2 routes are exposed by the ingestor:
 
-1. /ingest_single - To send a single log to the ingestor
+1. `/ingest_single` - To send a single log to the ingestor
 
-2. /ingest_bulk - To send multiple logs to the ingestor at once
+2. `/ingest_bulk` - To send multiple logs to the ingestor at once
 
-A sample cURL request to /ingest_single is as follows:
+A sample `cURL` request to /ingest_single is as follows:
 
 ```
 curl --location 'http://localhost:3000/ingest_single' \
@@ -154,7 +147,7 @@ curl --location 'http://localhost:3000/ingest_single' \
 }'
 ```
 
-A sample cURL request to /ingest_bulk is as follows:
+A sample `cURL` request to /ingest_bulk is as follows:
 
 ```
 curl --location 'http://localhost:3000/ingest_bulk' \
@@ -220,7 +213,7 @@ Usage:
         node searcher.js --startDate 2023-11-01T17:11:55.982264Z
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Design -->
 
@@ -232,32 +225,32 @@ For efficient full-text search, Elasticsearch is a powerful choice. It provides 
 
 Full-Text Search and Querying:
 
-    Elasticsearch is designed for full-text search, making it well-suited for log data that often needs to be queried based on various fields.
+  Elasticsearch is designed for full-text search, making it well-suited for log data that often needs to be queried based on various fields.
 
 Indexing:
 
-    Elasticsearch uses inverted indices for fast text-based search. This enables it to perform searches across large volumes of data efficiently.
+  Elasticsearch uses inverted indices for fast text-based search. This enables it to perform searches across large volumes of data efficiently.
 
 Scalability:
 
-    Elasticsearch is horizontally scalable, allowing you to add more nodes to your cluster as your data volume grows. It automatically distributes data across nodes, providing high scalability.
+  Elasticsearch is horizontally scalable, allowing you to add more nodes to your cluster as your data volume grows. It automatically distributes data across nodes, providing high scalability.
 
 Sharding:
 
-    Elasticsearch implements sharding, where it divides an index into multiple shards, each of which can be hosted on a separate node. This improves parallelism and helps distribute the data load.
+  Elasticsearch implements sharding, where it divides an index into multiple shards, each of which can be hosted on a separate node. This improves parallelism and helps distribute the data load.
 
 Real-Time Data:
 
-    Elasticsearch provides real-time search capabilities, making it suitable for scenarios where near real-time analysis of logs is crucial.
+  Elasticsearch provides real-time search capabilities, making it suitable for scenarios where near real-time analysis of logs is crucial.
 
 Flexibility:
 
-    It supports dynamic mapping, allowing you to index documents without predefining their structure. This flexibility is beneficial when dealing with diverse log formats. 
-    So we can process logs of other format as well.
+  It supports dynamic mapping, allowing you to index documents without predefining their structure. This flexibility is beneficial when dealing with diverse log formats. 
+  So we can process logs of other format as well.
 
 RESTful API:
 
-    Elasticsearch provides a RESTful API, making it easy to integrate with other tools - apart from the CLI tool that we have built, for querying the logs.
+  Elasticsearch provides a RESTful API, making it easy to integrate with other tools - apart from the CLI tool that we have built, for querying the logs.
 
 We have options for single node cluster and multi node cluster. Though multinode clusters are resource expensive but they have some pros over the other as follows:
 
@@ -277,7 +270,7 @@ Node.js is well-suited for building scalable and asynchronous applications. It i
 Containerized applications using Docker for easy deployment and scalability.
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Features -->
 
@@ -311,7 +304,7 @@ Aviral Srivastava - [@godofgeeks\_](https://twitter.com/godofgeeks_) - aviralji4
 
 LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.com/in/aviralsrivastav23/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -322,4 +315,4 @@ LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.
 [twitter-url]: https://twitter.com/godofgeeks_
 [github-shield]: https://img.shields.io/badge/-Github-black.svg?style=for-the-badge&logo=github&colorB=555
 [github-url]: https://github.com/godofgeeks23
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/productname.png
