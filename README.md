@@ -216,7 +216,7 @@ Usage:
 
 ## Design
 
-[![System Design][system-design]]
+![System Design][system-design]
 
 ### Why Elasticsearch?
 
