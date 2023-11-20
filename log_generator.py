@@ -1,3 +1,7 @@
+#  this python script was used to generate random logs and send them to the log ingester
+
+# just for testing purposes
+
 import requests
 import json
 import random
