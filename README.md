@@ -9,6 +9,9 @@
 <br />
 <div align="center">
 
+<a href="https://github.com/dyte-submissions/november-2023-hiring-godofgeeks23">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
 <h3 align="center">Logs Ingestor and Query system</h3>
 
@@ -127,7 +130,7 @@ Mainly 2 routes are exposed by the ingestor:
 
 2. `/ingest_bulk` - To send multiple logs to the ingestor at once
 
-A sample `cURL` request to /ingest_single is as follows:
+A sample `cURL` request to `/ingest_single` is as follows:
 
 ```
 curl --location 'http://localhost:3000/ingest_single' \
@@ -144,7 +147,7 @@ curl --location 'http://localhost:3000/ingest_single' \
 }'
 ```
 
-A sample `cURL` request to /ingest_bulk is as follows:
+A sample `cURL` request to `/ingest_bulk` is as follows:
 
 ```
 curl --location 'http://localhost:3000/ingest_bulk' \
@@ -316,3 +319,4 @@ LinkedIn: [https://www.linkedin.com/in/aviralsrivastav23/](https://www.linkedin.
 [github-url]: https://github.com/godofgeeks23
 [product-screenshot]: images/productname.png
 [system-design]: images/systemdesign.png
+[logo]: images/logo.png
