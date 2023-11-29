@@ -8,7 +8,7 @@ const port = 3000;
 const esClient = new Client({ node: 'http://localhost:9200' }); // Update with your Elasticsearch server URL
 
 // set limit of request body size
-app.use(express.json({ limit: '50mb' }));
+app.use(express.json({ limit: '10mb' }));
 
 
 // Log ingestion endpoint
