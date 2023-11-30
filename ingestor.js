@@ -31,6 +31,7 @@ app.post('/ingest_single', async (req, res) => {
     }
 });
 
+// Bulk log ingestion endpoint
 app.post('/ingest_bulk', async (req, res) => {
     try {
         const logsData = req.body;
