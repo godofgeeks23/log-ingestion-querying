@@ -11,7 +11,7 @@ const esClient = new Client({ node: 'http://localhost:9200' }); // Update with y
 app.use(express.json({ limit: '10mb' }));
 
 
-// Log ingestion endpoint
+// Log ingestion endpoint for single log
 app.post('/ingest_single', async (req, res) => {
     try {
         const logData = req.body;
@@ -31,7 +31,7 @@ app.post('/ingest_single', async (req, res) => {
     }
 });
 
-// Bulk log ingestion endpoint
+// Bulk log ingestion endpoint for multiple logs
 app.post('/ingest_bulk', async (req, res) => {
     try {
         const logsData = req.body;
